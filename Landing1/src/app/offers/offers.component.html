@@ -1,0 +1,15 @@
+<div class="offers">
+    <div class="offers__content" *ngFor=" let content of offersContent">
+        <div class="offers__item">
+            <img src="{{content.img}}" alt="">
+            <div class="desc" *ngIf="selectedLanguage === 'geo'">
+                {{content.geoDescription}}
+            </div>
+
+            <div class="desc" *ngIf="selectedLanguage === 'eng'">
+                {{content.engDescription}}
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,44 @@
+<div class="slider" (window:resize)="onResize()">
+  <div class="carousel-out">
+    <div class="slider__carousel" [style.left]="sliderPos + 'px'">
+      <div class="slider__slide" 
+          *ngFor="let slide of slides; index as i"
+          [ngClass]="{'active': i === active}">
+  
+          <div class="date" *ngIf="selectedLanguage === 'geo'">
+            {{slide.dateGeo}}
+          </div>
+
+          <div class="date" *ngIf="selectedLanguage === 'eng'">
+            {{slide.dateEng}}
+          </div>
+          <div class="slide-cashabck">
+            {{slide.cashback}}
+          </div>
+          <div class="progress">
+            <span>0ლ</span>
+            <div class="progress-bar">
+              <div class="progress-bg"></div>
+            </div>
+            <span *ngIf="selectedLanguage === 'geo'">250ლ</span> 
+            <span *ngIf="selectedLanguage === 'eng'">250Gel</span> 
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <div class="slider__arrows">
+    <div class="arrow left" (click)="slideLeft()">
+      <img src="../../assets/images/arrow-left.png" alt="">
+    </div>
+    <div class="arrow right" (click)="slideRight()">
+      <img src="../../assets/images/arrow-right.png" alt="">
+    </div>
+  </div>
+
+  <div class="slider__sidebgs">   
+      <img src="../../assets/images/slider-left-bg.png" class="slider__bg left-bg" alt="">   
+      <img src="../../assets/images/slider-right-bg.png" class="slider__bg right-bg" alt="">   
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="alert container">
+    <div class="alert__icon">
+        <img src="../../assets/images/alert_icon.png" alt="alert">
+    </div>
+
+    <div class="alert__content" *ngIf="selectedLanguage === 'geo'">
+        <p>{{alertText1.geo}}</p>
+        <p>{{alertText2.geo}}</p>
+    </div>
+
+    <div class="alert__content" *ngIf="selectedLanguage === 'eng'">
+        <p>{{alertText1.eng}}</p>
+        <p>{{alertText2.eng}}</p>
+    </div>
+</div>

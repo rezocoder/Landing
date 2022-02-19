@@ -1,0 +1,28 @@
+<header class="header" [ngClass]="[headerStyle]">
+    <div class="header__body">
+        <nav>
+                <div class="header__logo">
+                    <img src="../../assets/images/logo.png" alt="Betlive">
+                </div>
+                <div class="header__languages">
+                    <ul [class]="flagsPosition">
+                        <li class="header__language english">
+                            
+                                <img 
+                                    src="../../assets/images/Flag_of_Great_Britain_(1707–1800).svg.png" 
+                                    alt="eng" 
+                                    (click)="updateData.emit('eng'); changeToEng()"
+                                >
+                            
+                        </li>
+                        <li class="header__language georgian">
+                                <img 
+                                    src="../../assets/images/Flag_of_Georgia_Fotor.jpg" 
+                                    alt="geo" 
+                                    (click)="updateData.emit('geo'); changeToGeo()">
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+</header>

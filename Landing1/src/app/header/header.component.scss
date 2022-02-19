@@ -1,0 +1,131 @@
+.header {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: all .3s;
+    margin-bottom: 50px;
+
+    &__body {
+        width: calc(100% - 20px);
+        max-width: 1140px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        
+
+        nav {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+
+    &__languages {
+        min-width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        ul {
+            background-color: rgba(0,0,0,.25);
+            border-radius: 2px;
+            transition: all .2s ease;
+            display: flex;
+            align-items: center;
+            padding: 0 4px 10px 4px;
+            position: relative;
+            top: 10px;
+
+            &:hover {
+                gap: 10px;
+                padding-left: 6px;
+
+                .english, .georgian  {
+                    width: 22px !important;
+                }
+            }
+            
+            .english {
+                width: 0;
+            }
+        }      
+     }
+
+    &__language {
+        width: 22px;
+        height: 14px;
+        transition:  0.2s;
+
+        img {
+            width: 100%;
+            min-height: 100%;
+            cursor: pointer;
+        }
+    }
+
+    &__logo {
+        cursor: pointer;
+    }
+}
+
+.header__background {
+    background-color: rgba(32,36,46,.65);
+}
+
+.change-to-eng {
+    flex-flow: row-reverse;
+    .english {
+        width: 22px !important;
+    }
+
+    .georgian {
+        width: 0 !important;
+    }
+}
+
+.change-to-geo {
+    flex-flow: row;
+    .english {
+        width: 0 !important;
+    }
+
+    .georgian {
+        width: 22px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__body {
+            max-width: 920px;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .header {
+        &__body {
+            max-width: 690px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        height: 50px;
+        &__body {
+            max-width: 510px;
+            padding: 0;
+        }
+    }
+}

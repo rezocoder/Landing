@@ -1,0 +1,42 @@
+<div class="cashback container">
+    <img src="../../assets/images/cashback_hat.png" class="cashback__img">
+    <div class="cashback__content" *ngIf="selectedLanguage === 'geo'">
+        <div class="cashback__header" [innerHTML]="cashbackHeader.geo">
+        </div>
+        <div class="cashback__equals">
+            <div class="cashback__item box1">
+                <div class="cashback__text">
+                    {{equalText1.geo}}
+                </div>
+                 {{price.geo}}
+            </div>
+            <img src="../../assets/images/equals.png" alt="">
+            <div class="cashback__item box2">
+                {{secondPrice}}
+                <div class="cashback__text">
+                    {{equalText2.geo}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cashback__content" *ngIf="selectedLanguage === 'eng'">
+        <div class="cashback__header" [innerHTML]="cashbackHeader.eng">
+        </div>
+        <div class="cashback__equals">
+            <div class="cashback__item box1">
+                <div class="cashback__text">
+                    {{equalText1.eng}}
+                </div>
+                 {{price.eng}}
+            </div>
+            <img src="../../assets/images/equals.png" alt="">
+            <div class="cashback__item box2">
+                {{secondPrice}}
+                <div class="cashback__text">
+                    {{equalText2.eng}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

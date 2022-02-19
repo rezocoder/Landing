@@ -1,0 +1,23 @@
+<div class="rules container" *ngIf="selectedLanguage === 'geo'">
+    <div class="rules__question" *ngFor="let question of questions">
+        <div class="rule" (click)="showContent(question.id)">
+            <h3>{{question.question.geo}}</h3>
+            <div  
+                class="show" 
+                [style.backgroundImage] = "'url('+ question.arrow +')'"></div>
+        </div>
+        <div *ngIf="question.show" class="answer">{{question.answer.geo}}</div>
+    </div>
+</div>
+
+<div class="rules container" *ngIf="selectedLanguage === 'eng'">
+    <div class="rules__question" *ngFor="let question of questions">
+        <div class="rule" (click)="showContent(question.id)">
+            <h3>{{question.question.eng}}</h3>
+            <div  
+                class="show" 
+                [style.backgroundImage] = "'url('+ question.arrow +')'"></div>
+        </div>
+        <div *ngIf="question.show" class="answer">{{question.answer.eng}}</div>
+    </div>
+</div>

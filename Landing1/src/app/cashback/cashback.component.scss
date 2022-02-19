@@ -1,0 +1,168 @@
+.cashback {
+    margin-top: 30px;
+    
+
+    &__content {
+        position: relative;
+        height: 364px;
+        border-radius: 3px;
+        background-color: rgba(204,84,84,.051);
+        box-shadow: 3.517px 8.285px 103px 0 rgb(0 0 0 / 55%);
+        max-width: 825px;
+        margin: auto;
+        top: -5px;
+        padding-top: 30px;
+    }
+
+    &__img {
+        max-width: 965px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__header {
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        font-weight: bolder;
+
+        ::ng-deep span {
+            color: #fdb936;
+        }
+    }
+
+    &__equals {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        margin-top: 40px;
+        font-weight: bold;
+
+        .box2 {
+            color: #fff;
+            background: linear-gradient(45deg,#462ec5 0,#6d15c9 95%);
+        }
+    }
+
+    &__item {
+        width: 190px;
+        height: 160px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 58px;
+        line-height: 82px;
+        background-color: #fff;
+        color: #7c2dc5;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        width: 90%;
+        height: 60px;
+        margin: 10px auto;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0,0,0,.078);
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cashback {
+        width: 100%;
+        max-width: none;
+
+
+        &__content {
+            max-width: 690px;
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .cashback {
+
+        &__img {
+            max-width: 710px;
+        }
+
+        &__content {
+            height: auto;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .cashback {
+
+        &__img {
+            max-width: 520px;
+        }
+
+        &__content {
+            max-width: 510px;
+            padding: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 576px) {
+    .cashback {
+        padding: 0;
+
+        &__img {
+            max-width: 520px;
+            width: 100%;
+        }
+
+        &__content {
+            font-size: 11px;
+        }
+
+        &__header {
+            ::ng-deep h2 {
+                font-size: 18px;
+            }
+        }
+
+        &__text {
+            ::ng-deep {
+                font-size: 13px;
+            }
+        }
+
+        &__item {
+            font-size: 24px;
+            height: 100px;
+            width: 140px;
+            line-height: 20px;
+            padding-bottom: 105px;
+        }
+
+        &__equals {
+            gap: 10px;
+
+            img {
+                width: 30px;
+            }
+        }
+
+        .box2 {
+            line-height: 42px;
+
+            .cashback__text {
+                font-size: 18px;
+            }
+        }
+    }
+}
